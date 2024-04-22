@@ -46,19 +46,50 @@ input {
   cursor: pointer;
 }
 
-#button:hover {
+#button:hover,
+#btnNewQrCode:hover {
   background-color: darkolivegreen;
 }
 
 #result {
   text-align: center;
-  margin-top: 1rem;
-  border: 1px solid #ccc;
+}
+
+#result img {
+  margin: 1rem auto;
+}
+
+#result h3 {
+  text-align: left;
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+#textGenerate {
+  background-color: #f4f4f4;
   border-radius: 1rem;
   padding: 1rem;
+  line-height: 1.3rem;
+}
+
+#btnNewQrCode {
+  text-decoration: none;
+  background-color: darkgreen;
+  color: #fff;
+  border-radius: 1rem;
+  cursor: pointer;
+  padding: 1rem;
+  margin: 1rem auto;
+  width: 100%;
+  display: block;
+  font-size: 0.8rem;
+}
+
+.inactive {
   display: none;
 }
 
-#main.active #result {
+.active {
   display: block;
 }
