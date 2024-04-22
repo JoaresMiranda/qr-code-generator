@@ -12,6 +12,8 @@ const generateQrCode = () => {
 
   if (!inputValue || inputValue.trim().length === 0) {
     alert('Text or URL is required');
+    inputText.focus();
+    inputText.value = '';
     return;
   }
 
