@@ -22,3 +22,7 @@ Project created to practice and improve my frontend skills.
 - New result display
   - ⁠⁠Display of QR-Code content
   - Inserted "⁠create new QR-Code" button
+
+**1.1.1**
+
+- Fixed error when text had special characters

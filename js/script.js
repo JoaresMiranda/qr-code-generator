@@ -19,7 +19,8 @@ const generateQrCode = () => {
 
   buttonForm.value = 'Generating code...';
 
-  qrCodeImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${inputValue}`;
+  const encodeData = encodeURIComponent(inputValue);
+  qrCodeImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeData}`;
 
   qrCodeImg.addEventListener('load', () => {
     container.classList.replace('active', 'inactive');
@@ -28,8 +29,10 @@ const generateQrCode = () => {
   });
 };
 
+//api.qrserver.com/v1/create-qr-code/?data=compre+na+C%26A%2C+pois+é+%2B+barato&size=220x220&margin=0
+
 // Events
-buttonForm.addEventListener('click', (e) => {
+https: buttonForm.addEventListener('click', (e) => {
   e.preventDefault();
   generateQrCode();
 });
